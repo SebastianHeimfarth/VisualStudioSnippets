@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Test Method</Title>
+      <Shortcut>testm</Shortcut>
+      <Description>Test method based on NUnit, NSubstitute and Shouldly</Description>
+      <Author>SebastianHeimfarth</Author>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NSubstitute</Namespace>
+        </Import>
+		<Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+		<Import>
+          <Namespace>Shouldly</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Name of method to be tested</ToolTip>
+          <Default>MyMethod</Default>
+        </Literal>
+		<Literal>
+          <ID>condition</ID>
+          <ToolTip>Condition</ToolTip>
+          <Default>ByDefault</Default>
+        </Literal>
+		<Literal>
+          <ID>assertment</ID>
+          <ToolTip>Expected behaviour</ToolTip>
+          <Default>WorkAsExpected</Default>
+        </Literal>
+          <Literal Editable="false">
+            <ID>TestMethod</ID>
+            <Function>SimpleTypeName(Test)</Function>
+          </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[[$TestMethod$]
+      public void $name$_$condition$_Should$assertment$()
+      {
+			//arrage
+			$end$
+			//act
+			
+			//assert
+			
+      }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
